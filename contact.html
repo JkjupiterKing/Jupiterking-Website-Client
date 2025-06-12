@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jupiterking Technologies - Contact</title>
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8; color: #1a1a1a; line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: #004080; text-decoration: underline; }
+    /* Header */
+    header {
+      position: sticky; top: 0; background-color: #fff;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.8rem 2rem; z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+    .logo {
+      color: #004080;
+      font-size: 1.5rem; font-weight: 700;
+      letter-spacing: 1.2px; display: flex; align-items: center;
+      min-width: 0;
+    }
+    .logo img {
+      height: 60px; max-width: 100%; vertical-align: middle; margin-right: 12px;
+      width: auto;
+    }
+    nav {
+      display: flex; gap: 1.2rem; flex-wrap: wrap;
+    }
+    nav a {
+      color: #004080;
+      font-weight: 600; padding: 0.3rem 0.5rem;
+      border-radius: 4px; transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+    nav a:hover, nav a.active {
+      background-color: #f0f4f8;
+      color: #003366;
+      text-decoration: none;
+    }
+    @media(max-width:900px){
+      header { flex-direction: column; align-items: flex-start; padding: 0.8rem 1rem; }
+      nav { margin-top: 0.5rem; }
+      .logo img { height: 48px; }
+    }
+    @media(max-width:600px){
+      .logo img { height: 36px; }
+      nav { gap: 0.7rem; }
+    }
+    @media(max-width:400px){
+      .logo { font-size: 1rem; }
+      .logo img { height: 28px; margin-right: 6px; }
+      nav a { font-size: 0.9rem; }
+    }
+    /* Main container */
+    .container {
+      max-width: 600px; margin: 3rem auto 6rem; padding: 0 1.25rem;
+    }
+    /* Heading */
+    h1 {
+      color: #004080; font-size: 2.4rem; margin-bottom: 1.5rem;
+      text-align: center; font-weight: 700;
+    }
+    /* Contact form */
+    form {
+      background: white; padding: 2rem; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,64,128,0.1);
+    }
+    label {
+      display: block; font-weight: 600; margin-bottom: 0.5rem;
+      color: #333;
+    }
+    input, textarea {
+      width: 100%; padding: 0.6rem 0.8rem; margin-bottom: 1.3rem;
+      border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus {
+      border-color: #004080;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,64,128,0.3);
+    }
+    /* Stylish Send Message Button */
+    .send-btn {
+      background: #004080;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.5rem;
+      border: none;
+      border-radius: 50px 10px 50px 10px;
+      font-size: 1.15rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      box-shadow: 0 4px 16px rgba(0,64,128,0.18);
+      margin-top: 0.5rem;
+      outline: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .send-btn::after {
+      content: "➤";
+      margin-left: 12px;
+      font-size: 1.2em;
+      vertical-align: middle;
+      transition: margin-left 0.2s;
+    }
+    .send-btn:hover, .send-btn:focus {
+      background: #0073e6;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 24px rgba(0,64,128,0.25);
+    }
+    .send-btn:hover::after, .send-btn:focus::after {
+      margin-left: 20px;
+    }
+    /* Contact info */
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+    }
+    /* Footer */
+    footer {
+      text-align: center; padding: 1.5rem 1rem;
+      font-size: 0.9rem; color: #777; background-color: #f0f4f8;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="WhatsApp Image 2025-05-21 at 12.42.58_230f8b5b.jpg" alt="Jupiterking Technologies Logo" style="height:100px; vertical-align:middle; margin-right:12px; max-width:100%;">
+      Jupiterking Technologies
+    </div>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="domains.html">Domains</a>
+      <a href="clients.html">Clients</a>
+      <!-- <a href="gallery.html">Gallery</a> -->
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Contact Us</h1>
+    <form action="#" method="post" aria-label="Contact form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Office Location:</strong> MIG 20, Nrupatunga Rd,Kuvempu Nagara,Mysore, Karnataka, India</p>
+      <p><strong>Email:</strong> info@jupiterkingtechnologies.com</p>
+      <p><strong>Phone:</strong> +9172594 89277</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2024 Jupiterking Technologies. All rights reserved.
+  </footer>
+</body>
+</html>
