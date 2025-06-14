@@ -10,22 +10,85 @@
     <div class="Navbar" id="Navbar">
       <!-- Navbar content here -->
     </div>
-    <main class="container" role="main">
-      <h1>Our Clients</h1>
-      <ul class="clients-list">
-        <li>
-          <strong>Qdata:</strong> Collaborated on data-driven software solutions
-          that streamline business processes.
-        </li>
-        <li>
-          <strong>Digital Nest Solutions:</strong> Delivered custom web and
-          mobile solutions tailored for their unique client demands.
-        </li>
-        <li>
-          <strong>MGC Books:</strong> Developed and hosted their multi-page
-          e-commerce website, enhancing their online presence.
-        </li>
-      </ul>
+    <main class="container-fluid" role="main">
+      <h1 class="text-center">Our Clients</h1>
+      <!-- Client Logos / Brands Worked With -->
+      <div class="client-logos">
+        <div class="card">
+          <img
+            src="../resources/Images/qdatalogo.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body"></div>
+        </div>
+        <div class="card">
+          <img
+            src="../resources/Images/DNS_Logo.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body"></div>
+        </div>
+        <div class="card">
+          <img
+            src="../resources/Images/MGC-logo.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body"></div>
+        </div>
+      </div>
+
+      <!-- Client Testimonials -->
+      <h2 class="section-header text-center mt-5">What Our Clients Say</h2>
+      <div class="testimonial-cards">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Alex Johnson"
+              class="testimonial-image mx-auto"
+            />
+            <p class="testimonial-quote">
+              "Jupiterking Technologies transformed our business with their
+              innovative solutions!"
+            </p>
+            <div class="testimonial-author">Alex Johnson, CEO, Qdata</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Sara Williams"
+              class="testimonial-image mx-auto"
+            />
+            <p class="testimonial-quote">
+              "Their team is highly skilled and dedicated. We couldn't be
+              happier!"
+            </p>
+            <div class="testimonial-author">
+              Sara Williams, CTO, Digital Nest
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img
+              src="https://randomuser.me/api/portraits/men/50.jpg"
+              alt="Michael Lee"
+              class="testimonial-image mx-auto"
+            />
+            <p class="testimonial-quote">
+              "Excellent service and support throughout the project!"
+            </p>
+            <div class="testimonial-author">
+              Michael Lee, Manager, MGC Books
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <div id="footer"></div>
     <script src="./clients.js"></script>
