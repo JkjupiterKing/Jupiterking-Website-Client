@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jupiterking Technologies - Contact</title>
     <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="../footer/footer.css" />
   </head>
   <body>
     <div class="Navbar" id="Navbar">
@@ -12,41 +13,80 @@
     </div>
     <main class="container" role="main">
       <h1>Contact Us</h1>
-      <form
-  action="https://formspree.io/f/xanjdony"
-  method="POST"
->
-        
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="you@example.com"
-        />
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
-        <button type="submit" class="send-btn">Send Message</button>
-      </form>
+      <div class="contact-flex">
+        <form
+          action="https://formspree.io/f/xanjdony"
+          method="POST"
+          aria-label="Contact form"
+          autocomplete="on"
+          class="contact-form"
+        >
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+            autocomplete="name"
+          />
 
-      <div class="contact-info">
-        <p>
-          <strong>Office Location:</strong> MIG 20, Nrupatunga Rd,Kuvempu
-          Nagara,Mysore, Karnataka, India
-        </p>
-        <p><strong>Email:</strong> info@jupiterkingtechnologies.com</p>
-        <p><strong>Phone:</strong> +9172594 89277</p>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Your Phone Number"
+            autocomplete="tel"
+            pattern="[0-9+\-\s]{7,15}"
+            title="Please enter a valid phone number"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info" aria-label="Company contact information">
+          <h2>Our Office</h2>
+          <address>
+            <strong>Jupiterking Technologies Pvt. Ltd.</strong><br />
+            MIG 20, Nrupatunga Road,<br />
+            Kuvempu Nagara,<br />
+            Mysore, Karnataka, India<br /><br />
+            <strong>Email:</strong>
+            <a href="mailto:info@jupiterkingtechnologies.com"
+              >info@jupiterkingtechnologies.com</a
+            ><br />
+            <strong>Phone:</strong>
+            <a href="tel:+917259489277">+91 72594 89277</a>
+          </address>
+          <p>
+            <strong>Business Hours:</strong> Monday - Saturday, 9:00 AM to 6:00 PM
+            IST
+          </p>
+        </div>
       </div>
     </main>
 
     <div id="footer"></div>
+
     <script src="./contact.js"></script>
     <script src="../resources/jquery/jquery-3.7.1.min.js"></script>
   </body>

@@ -643,3 +643,137 @@ footer .contact-info p {
     font-size: 0.9rem;
   }
 }
+
+
+
+/* New CSS */
+       /* Product Card Styles */
+.product-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    border-radius: 12px; /* Match header border radius */
+    box-shadow: 0 4px 18px rgba(0, 64, 128, 0.1); /* Match header shadow */
+}
+
+.product-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.product-card:hover .product-inner {
+    transform: rotateY(180deg);
+}
+
+.product-front, .product-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 1.5rem;
+    border-radius: 12px; /* Match header border radius */
+}
+
+.product-back {
+    transform: rotateY(180deg);
+    background: #ffffff; /* Match header background */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Blue gradient background for all front cards */
+.blue-gradient {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+}
+
+
+/* Product Card Styles */
+.product-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    border-radius: 12px; /* Match header border radius */
+    box-shadow: 0 4px 18px rgba(0, 64, 128, 0.1); /* Match header shadow */
+}
+
+.product-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.product-card:hover .product-inner {
+    transform: rotateY(180deg);
+}
+
+.product-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 1.5rem;
+    border-radius: 12px; /* Match header border radius */
+    background-color: #ffffff; /* White background for the front */
+}
+
+.product-back {
+    transform: rotateY(180deg);
+    background-color: #ffffff; /* White background for the back */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Image styling */
+.product-image {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-top: auto;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Feature list styling */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    background: rgba(29, 78, 216, 0.1);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    text-align: center;
+    color: #1d4ed8; /* Match header link color */
+    font-weight: 500;
+}
+
+/* Icon container styling */
+.icon-container {
+    width: 4rem;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Button styling */
+.learn-more-btn {
+    background: white; /* Match header link color */
+    color: #1d4ed8; /* Change text color to match the theme */
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    border: none; /* Remove default button border */
+}
+
+.learn-more-btn:hover {
+    background: #1e40af; /* Darker shade for hover effect */
+    color: white; /* Change text color on hover */
+    transform: translateY(-2px);
+}

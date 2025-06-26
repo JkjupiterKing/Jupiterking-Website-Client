@@ -3,15 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jupiterking Technologies offers innovative software solutions for project management, e-commerce, and more." />
     <title>Jupiterking Technologies - Home</title>
     <link rel="stylesheet" href="./products.css" />
-  </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
   <body>
-    <div class="Navbar" id="Navbar">
+    <header class="Navbar" id="Navbar">
       <!-- Navbar content here -->
-    </div>
-    <h1>Products</h1>
-    <div id="footer"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- JupiterScrum -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-project-diagram text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">JupiterScrum</h3>
+              <p class="opacity-90 mb-4">Agile project management reimagined with intuitive 3D Kanban boards and real-time collaboration.</p>
+              <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-project-diagram text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>3D Task Visualization</li>
+                <li>Sprint Planning Tools</li>
+                <li>AI Workload Balancing</li>
+                <li>Real-time Analytics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jupiter E-Commerce -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-shopping-cart text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Jupiter E-Commerce</h3>
+              <p class="opacity-90 mb-4">Complete retail solution with AI recommendations, multi-channel sales, and built-in analytics.</p>
+              <div class="product-image" style="background-image: url('../resources/Images/e-commerce.avif'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-shopping-cart text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>AI Recommendations</li>
+                <li>Multi-Channel Sales</li>
+                <li>Inventory Sync</li>
+                <li>Smart Checkout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoice Management -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-file-invoice-dollar text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Invoice Management</h3>
+              <p class="opacity-90 mb-4">Automated billing and payment tracking with AI-powered expense categorization.</p>
+              <div class="product-image" style="background-image: url('../resources/Images/invoice.htm'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-file-invoice-dollar text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>Auto Invoice Generation</li>
+                <li>Payment Tracking</li>
+                <li>Expense Analytics</li>
+                <li>Tax Compliance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jupiter-LMS -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-graduation-cap text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Jupiter-LMS</h3>
+              <p class="opacity-90 mb-4">Interactive learning platform with VR classrooms and AI-powered assessments.</p>
+              <div class="product-image" style="background-image: url('../resources/Images/lms.jpg'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-graduation-cap text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>VR Classrooms</li>
+                <li>AI Assessments</li>
+                <li>Progress Tracking</li>
+                <li>Certification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jupiter ERP -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-industry text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Jupiter ERP</h3>
+              <p class="opacity-90 mb-4">End-to-end business management with real-time analytics across all departments.</p>
+              <div class="product-image" style="background-image: url('../resources/Images/ERP.png'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-industry text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>Unified Dashboard</li>
+                <li>Supply Chain Mgmt</li>
+                <li>Financial Suite</li>
+                <li>HR Integration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- JSales -->
+        <div class="product-card h-80 relative">
+          <div class="product-inner h-full w-full">
+            <div class="product-front rounded-xl shadow-2xl flex flex-col p-6">
+              <div class="icon-container">
+                <i class="fas fa-chart-line text-2xl text-gray-800"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">JSales</h3>
+              <p class="opacity-90 mb-4">AI-powered sales automation with predictive lead scoring and smart pipelines.</p>
+              <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80'); height: 150px; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="product-back rounded-xl flex flex-col justify-center items-center p-6">
+              <div class="icon-container bg-gray-50 mb-4">
+                <i class="fas fa-chart-line text-2xl text-gray-600"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Key Features</h4>
+              <ul class="feature-list w-full">
+                <li>Lead Management</li>
+                <li>Sales Pipeline</li>
+                <li>Customer Insights</li>
+                <li>Automated Follow-ups</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer"></footer>
     <script src="./products.js"></script>
     <script src="../resources/jquery/jquery-3.7.1.min.js"></script>
   </body>
