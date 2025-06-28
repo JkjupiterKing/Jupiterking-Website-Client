@@ -336,6 +336,7 @@ footer .contact-info p {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 25px rgb(0 0 0 / 0.07);
+  padding-bottom: 1rem; /* add or reduce to 1rem */
 }
 /* About section */
 .about {

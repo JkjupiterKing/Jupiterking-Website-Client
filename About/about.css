@@ -72,6 +72,7 @@ nav a.active {
   max-width: 900px;
   margin: 3rem auto 6rem;
   padding: 0 1.25rem;
+  padding-bottom: 1rem; /* add or reduce to 1rem */
 }
 h1 {
   color: #004080;

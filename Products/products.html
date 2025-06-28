@@ -11,11 +11,18 @@
     
 </head>
   <body>
-    <header class="Navbar" id="Navbar">
+    <div class="Navbar" id="Navbar">
       <!-- Navbar content here -->
-    </header>
+    </div>
 
-    <main class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <!-- Intro Section -->
+      <section class="products-intro text-center mb-10">
+        <h1 class="text-3xl font-bold mb-3">Our Products</h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          Discover our suite of innovative software solutions designed to streamline your business operations, enhance productivity, and drive digital transformation. From agile project management to AI-powered sales automation, we deliver products that empower your growth.
+        </p>
+      </section>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- JupiterScrum -->
         <div class="product-card h-80 relative">
@@ -173,10 +180,20 @@
           </div>
         </div>
       </div>
+      <!-- Call to Action -->
+      <section class="products-cta text-center mt-8">
+        <h2 class="text-2xl font-semibold mb-2">Looking for a Custom Solution?</h2>
+        <p class="text-gray-700 mb-4">
+          We also build tailored software products to fit your unique business needs. Reach out to discuss your requirements!
+        </p>
+        <a href="../contact/contact.html" class="inline-block bg-blue-700 hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-full transition">
+          Contact Us
+        </a>
+      </section>
     </main>
-
-    <footer id="footer"></footer>
+    <footer id="footer" style="margin-top:0;"></footer>
     <script src="./products.js"></script>
     <script src="../resources/jquery/jquery-3.7.1.min.js"></script>
   </body>
+</html>
 </html>

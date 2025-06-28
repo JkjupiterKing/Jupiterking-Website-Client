@@ -67,13 +67,14 @@ nav a.active {
   text-decoration: none;
 }
 .services-hero {
-  background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80")
-    center/cover no-repeat;
+  background: linear-gradient(120deg, #1e3c72cc 0%, #2a5298cc 50%, #4e4376cc 100%),
+    url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
   color: #fff;
-  padding: 4rem 1rem 3rem 1rem;
+  padding: 3.5rem 0 2.5rem 0;
   text-align: center;
-  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.07);
   position: relative;
+  overflow: hidden;
 }
 .services-hero::after {
   content: "";
@@ -90,18 +91,21 @@ nav a.active {
   z-index: 2;
 }
 .services-hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 0.7rem;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(30,41,59,0.18);
 }
 .services-hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 600px;
   margin: 0 auto;
-  opacity: 0.97;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.93;
+  color: #e0e7ef;
+  text-shadow: 0 1px 4px rgba(30,41,59,0.10);
 }
 .services-list {
   max-width: 1200px;
@@ -121,6 +125,9 @@ nav a.active {
   transition: box-shadow 0.3s, transform 0.2s;
   min-height: 260px;
   position: relative;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: serviceFadeIn 0.8s forwards;
 }
 .service-row:nth-child(even) {
   flex-direction: row-reverse;
@@ -178,65 +185,6 @@ footer {
   font-size: 1rem;
   border-top: 1px solid #e0e7ef;
   margin-top: 2rem;
-}
-@media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.8rem 1rem;
-  }
-  nav {
-    margin-top: 0.5rem;
-  }
-  .logo img {
-    height: 48px;
-  }
-  .services-hero {
-    padding: 2.2rem 0.5rem 1.5rem 0.5rem;
-  }
-  .service-row,
-  .service-row:nth-child(even) {
-    flex-direction: column;
-    min-height: 0;
-  }
-  .service-img-col img {
-    min-height: 180px;
-  }
-  .service-info-col {
-    padding: 1.2rem 1rem 1.2rem 1rem;
-  }
-}
-@media (max-width: 600px) {
-  .logo img {
-    height: 36px;
-  }
-  nav {
-    gap: 0.7rem;
-  }
-  .services-list {
-    padding: 0 0.5rem;
-  }
-  .service-info-col {
-    padding: 1rem 0.5rem 1rem 0.5rem;
-  }
-}
-@media (max-width: 400px) {
-  .logo {
-    font-size: 1rem;
-  }
-  .logo img {
-    height: 28px;
-    margin-right: 6px;
-  }
-  nav a {
-    font-size: 0.9rem;
-  }
-  .service-info-col {
-    font-size: 0.97rem;
-  }
-}
-/* Footer with pattern and updated color */
-footer {
   background-color: #f9fafb;
   color: #374151;
   padding: 4rem 1.5rem 3rem;
@@ -309,6 +257,81 @@ footer .contact-info p {
   color: #475569;
   line-height: 1.5;
   font-size: 1rem;
+}
+.service-animate-1 { animation-delay: 0.1s; }
+.service-animate-2 { animation-delay: 0.3s; }
+.service-animate-3 { animation-delay: 0.5s; }
+.service-animate-4 { animation-delay: 0.7s; }
+.service-animate-5 { animation-delay: 0.9s; }
+@keyframes serviceFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-8px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  .logo img {
+    height: 48px;
+  }
+  .services-hero {
+    padding: 2.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .service-row,
+  .service-row:nth-child(even) {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .service-img-col img {
+    min-height: 180px;
+  }
+  .service-info-col {
+    padding: 1.2rem 1rem 1.2rem 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .logo img {
+    height: 36px;
+  }
+  nav {
+    gap: 0.7rem;
+  }
+  .services-list {
+    padding: 0 0.5rem;
+  }
+  .service-info-col {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .logo img {
+    height: 28px;
+    margin-right: 6px;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  .service-info-col {
+    font-size: 0.97rem;
+  }
 }
 @media (max-width: 768px) {
   footer .container {

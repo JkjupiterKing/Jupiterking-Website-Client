@@ -104,184 +104,188 @@ nav a.active {
   text-decoration: none;
 }
 
-/* Main container */
+/* Main container alignment */
 .container {
   max-width: 1200px;
-  margin: 3rem auto 8rem;
+  margin: 3rem auto 4rem auto;
   padding: 0 1.5rem;
   background: #fff;
   border-radius: 12px;
+  box-shadow: 0 6px 25px rgb(0 0 0 / 0.07);
 }
 
-/* Footer with pattern and updated color */
-footer {
-  background-color: #f9fafb;
-  color: #374151;
-  padding: 4rem 1.5rem 3rem;
-  font-size: 1rem;
-  text-align: left;
-  border-top: 1px solid #e5e7eb;
-  position: relative;
-  overflow: hidden;
+/* Section spacing */
+section {
+  margin-bottom: 2.5rem;
 }
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #e0e7ff 0,
-    #e0e7ff 10px,
-    #f9fafb 10px,
-    #f9fafb 20px
-  );
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
+
+/* College Collaboration alignment */
+#collegeCollab .row {
+  justify-content: center;
+  align-items: stretch;
 }
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
+
+.mou-card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.08);
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
 }
-footer .footer-section {
-  flex: 1 1 280px;
-  min-width: 280px;
-}
-footer h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1e293b;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
+
+.mou-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a237e;
   margin: 0;
+  letter-spacing: 0.5px;
 }
-footer ul li {
-  margin-bottom: 0.75rem;
+
+.mou-card:hover {
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.16);
+  transform: translateY(-4px) scale(1.03);
+  background: #e0e7ef;
 }
-footer ul li a {
-  color: #475569;
-  text-decoration: none;
-  transition: color 0.3s ease;
+
+/* Internship Technologies alignment */
+#internshipTech .d-flex {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+/* Gallery alignment */
+#internshipGallery .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#internshipGallery .carousel-item .row {
+  justify-content: center;
+}
+
+.gallery-img-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.10);
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: scale(0.85);
+  animation: none;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img-wrap img {
+  border-radius: 12px;
+  transition: transform 0.3s;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gallery-img-wrap:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18);
+}
+
+.zoom-in {
+  opacity: 0;
+  animation: zoomInAnim 0.7s forwards;
+}
+
+.show-now {
+  opacity: 1 !important;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+@keyframes zoomInAnim {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Testimonials alignment */
+#internTestimonials .row {
+  justify-content: center;
+  align-items: stretch;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
   font-size: 1rem;
 }
-footer ul li a:hover,
-footer ul li a:focus {
-  color: #2563eb;
-  outline: none;
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
 }
-footer .contact-info p {
-  margin: 0.5rem 0;
-  color: #475569;
-  line-height: 1.5;
-  font-size: 1rem;
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
 }
-@media (max-width: 768px) {
-  footer .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  footer .footer-section {
-    min-width: 100%;
-  }
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
 }
-/* Responsive */
-@media (max-width: 1100px) {
-  .container {
-    max-width: 98vw;
-  }
-}
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: 2.75rem;
-  }
-  .about {
-    flex-direction: column;
-  }
-  .about-text,
-  .about-image {
-    flex: 1 1 100%;
-  }
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.8rem 1rem;
-  }
-  nav {
-    margin-top: 0.5rem;
-  }
-  .logo img {
-    height: 90px;
-    margin-right: 12px;
-  }
-  .service-card {
-    min-height: auto;
-    align-items: center;
-    text-align: center;
-  }
-  .service-description {
-    max-width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .hero {
-    padding: 4rem 0.5rem 3rem;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .about-text,
-  .about-image {
-    min-width: 0;
-  }
-  .logo img {
-    height: 60px;
-    margin-right: 10px;
-  }
-  nav {
-    gap: 0.7rem;
-  }
-  .container {
-    padding: 0 0.5rem;
-  }
-  .service-card h3 {
-    font-size: 1.5rem;
-  }
-  .service-card p {
-    font-size: 1.1rem;
-  }
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1rem;
-  }
-  .service-title {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 400px) {
-  .logo {
-    font-size: 1rem;
-  }
-  .logo img {
-    height: 48px;
-    margin-right: 8px;
-  }
-  nav a {
-    font-size: 0.9rem;
-  }
-}
+
 /* Main Hero Section */
 #internshipMain {
   background: linear-gradient(to right, #004080cc, #0073e6cc),
@@ -318,54 +322,55 @@ footer .contact-info p {
 
 /* Internship Technologies badges */
 .tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
   font-weight: 600;
-  margin: 0 8px 8px 0;
-  font-size: 1rem;
-  padding: 10px 16px;
-  border-radius: 50px;
-  background: #007bff;
-  color: white;
-  display: inline-block;
-  transition: background 0.3s ease;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
   cursor: default;
 }
 
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
 .tech-badge:hover {
-  background: #0056b3;
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
 }
 
-/* College collaborations cards */
-.mou-card {
-  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.15);
-  border-radius: 10px;
-  background-color: white;
-  padding: 20px;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
 
-.mou-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 28px rgba(0, 123, 255, 0.3);
-}
-
-.mou-card img {
-  max-height: 70px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.mou-card h5 {
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #0056b3;
-}
-
-.mou-card p {
-  color: #555;
-  font-size: 0.9rem;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Gallery images */
@@ -453,4 +458,1777 @@ footer .contact-info p {
     0.5
   ); /* Semi-transparent background for better visibility */
   border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Main Hero Section */
+#internshipMain {
+  background: linear-gradient(to right, #004080cc, #0073e6cc),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
+      center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ff6b00;
+}
+
+#internshipMain h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#internshipMain p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+/* Section headers */
+.section-header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #003366;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Internship Technologies badges */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e0e7ef;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  margin: 0.5rem 0.6rem;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.07);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: fadeInUp 0.7s forwards;
+  cursor: default;
+}
+
+.tech-badge i {
+  margin-right: 0.7em;
+  font-size: 1.3em;
+}
+
+.tech-badge:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.fade-in-up { opacity: 0; animation: fadeInUp 0.7s forwards; }
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+.delay-11 { animation-delay: 0.88s; }
+.delay-12 { animation-delay: 0.96s; }
+.delay-13 { animation-delay: 1.04s; }
+.delay-14 { animation-delay: 1.12s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+}
+
+/* How to Apply Section */
+#howToApply ol {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#howToApply ol li {
+  margin-bottom: 15px;
+}
+
+/* Testimonials styles */
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  text-align: right;
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1rem;
+}
+/* Gallery images */
+.carousel-inner img {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+/* Contact Section */
+#contact {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgb(0 0 0 / 0.07);
+}
+
+.contact-flex {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.08);
+  padding: 2.2rem 2rem 2rem 2rem;
+  margin-bottom: 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-form:hover, .contact-info:hover {
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.16);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+  .contact-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .contact-form, .contact-info {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+  }
+}
+
+/* Gallery flex */
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.10);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.3s;
+  opacity: 0;
+  transform: scale(0.85) translateY(40px);
+  animation: none;
+  cursor: pointer;
+  width: 240px;
+  height: 170px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.3s;
+}
+
+.gallery-card:hover {
+  transform: scale(1.04) translateY(-6px);
+  box-shadow: 0 12px 32px rgba(30, 41, 59, 0.18);
+  z-index: 2;
+}
+
+.fade-in-scale {
+  opacity: 0;
+  animation: fadeInScale 0.8s forwards;
+}
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+.delay-5 { animation-delay: 0.40s; }
+.delay-6 { animation-delay: 0.48s; }
+.delay-7 { animation-delay: 0.56s; }
+.delay-8 { animation-delay: 0.64s; }
+.delay-9 { animation-delay: 0.72s; }
+.delay-10 { animation-delay: 0.80s; }
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: scale(1.07) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-flex {
+    gap: 1rem;
+  }
+  .gallery-card {
+    width: 160px;
+    height: 110px;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-flex {
+    gap: 0.7rem;
+  }
+  .gallery-card {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+/* Footer styles */
+#footer {
+  width: 100%;
+  background: #f9fafb;
+  color: #374151;
+  padding: 3rem 1.5rem 2rem;
+  font-size: 1rem;
+  text-align: left;
+  border-top: 1px solid #e5e7eb;
+  position: relative;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+#footer .container,
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+#footer .footer-section {
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+#footer h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer ul li {
+  margin-bottom: 0.75rem;
+}
+#footer ul li a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+#footer ul li a:hover,
+#footer ul li a:focus {
+  color: #2563eb;
+  text-decoration: underline;
+  outline: none;
+}
+#footer .contact-info p {
+  margin: 0.5rem 0;
+  color: #475569;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  #footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer .footer-section {
+    min-width: 100%;
+  }
 }

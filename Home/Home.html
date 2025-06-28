@@ -16,7 +16,7 @@
       aria-label="Welcome to Jupiterking Technologies"
     >
       <h3>Innovative Digital Solutions Tailored for Your Success</h3>
-      <p>
+      <p>in our services section make 
         Delivering cutting-edge web &amp; mobile apps, e-commerce platforms, and
         hosting services across diverse industries.
       </p>
@@ -25,8 +25,8 @@
       >
     </section>
 
-    <main class="container" role="main">
-      <section class="about" aria-labelledby="about-title">
+    <main class="container" role="main" style="margin-bottom: 1.5rem;">
+      <section class="about" aria-labelledby="about-title" style="margin-bottom: 0;">
         <div class="about-text">
           <h2 id="about-title">Who We Are</h2>
           <p>
@@ -49,10 +49,38 @@
           <img src="../resources/Images/Office background.jpg" />
         </div>
       </section>
-
-      <section class="services" aria-labelledby="services-title">
+      <section class="services" aria-labelledby="services-title" style="margin-top: 0;">
         <h2 id="services-title">Our Services</h2>
         <div class="services-grid">
+          <article
+            class="service-card"
+            tabindex="0"
+            role="region"
+            aria-labelledby="service5-title"
+          >
+            <svg
+              class="service-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 17a4 4 0 100-8 4 4 0 000 8zm1-14h-2v4h2V3zM6.22 6.22l-1.42 1.42M18.36 6.22l1.42 1.42M4.93 17.07l-1.42-1.42M19.07 17.07l1.42-1.42"
+              />
+            </svg>
+            <h3 id="service5-title">AI / ML Solutions</h3>
+            <p>
+              We implement advanced artificial intelligence and machine learning
+              solutions to drive innovation, automate processes, and extract
+              actionable insights from your data.
+            </p>
+          </article>
           <article
             class="service-card"
             tabindex="0"
@@ -180,35 +208,6 @@
             class="service-card"
             tabindex="0"
             role="region"
-            aria-labelledby="service5-title"
-          >
-            <svg
-              class="service-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M11 17a4 4 0 100-8 4 4 0 000 8zm1-14h-2v4h2V3zM6.22 6.22l-1.42 1.42M18.36 6.22l1.42 1.42M4.93 17.07l-1.42-1.42M19.07 17.07l1.42-1.42"
-              />
-            </svg>
-            <h3 id="service5-title">AI / ML Solutions</h3>
-            <p>
-              We implement advanced artificial intelligence and machine learning
-              solutions to drive innovation, automate processes, and extract
-              actionable insights from your data.
-            </p>
-          </article>
-          <article
-            class="service-card"
-            tabindex="0"
-            role="region"
             aria-labelledby="service6-title"
           >
             <svg
@@ -248,4 +247,5 @@
     <script src="./Home.js"></script>
     <script src="../resources/jquery/jquery-3.7.1.min.js"></script>
   </body>
+</html>
 </html>

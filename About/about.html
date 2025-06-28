@@ -5,45 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jupiterking Technologies - About Us</title>
     <link rel="stylesheet" href="./about.css" />
+    <style>
+      body {
+        background: #f6f8fa;
+      }
+      /* Animation for fade-in-up effect */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+        animation: fadeInUp 0.8s forwards;
+      }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      .delay-4 { animation-delay: 0.4s; }
+      .delay-5 { animation-delay: 0.5s; }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .about-hero {
+        background: linear-gradient(120deg, #1e293b 60%, #2563eb 100%);
+        color: #fff;
+        padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+        text-align: center;
+        border-radius: 0 0 32px 32px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+        margin-bottom: 2.5rem;
+      }
+      .about-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: 1.5px;
+      }
+      .about-hero p {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.92;
+      }
+      .about-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+        margin: 0 auto 2.5rem auto;
+        max-width: 1100px;
+        padding: 0 1.5rem;
+      }
+      .about-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(30,41,59,0.10);
+        padding: 2.2rem 2rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        min-height: 320px;
+        transition: box-shadow 0.3s, transform 0.3s;
+      }
+      .about-card:hover {
+        box-shadow: 0 12px 32px rgba(30,41,59,0.18);
+        transform: translateY(-6px) scale(1.03);
+      }
+      .about-card .about-icon {
+        font-size: 2.3rem;
+        color: #0073e6;
+        margin-bottom: 1.2rem;
+      }
+      .about-card h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #004080;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .about-card ul {
+        margin: 1rem 0 0 0;
+        padding-left: 1.2rem;
+        color: #444;
+      }
+      .about-card ul li {
+        margin-bottom: 0.7rem;
+        font-size: 1.08rem;
+      }
+      .about-card p {
+        color: #333;
+        font-size: 1.08rem;
+        margin-bottom: 0.7rem;
+      }
+      .about-methodology {
+        background: linear-gradient(120deg, #e0e7ef 60%, #f6f8fa 100%);
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(30,41,59,0.10);
+        padding: 2.2rem 2rem 2rem 2rem;
+        margin: 0 auto 2.5rem auto;
+        max-width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2.5rem;
+      }
+      .about-methodology-content {
+        flex: 2;
+      }
+      .about-methodology-img {
+        flex: 1;
+        min-width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-methodology-img img {
+        width: 180px;
+        max-width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      }
+      @media (max-width: 900px) {
+        .about-cards-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-methodology {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .about-methodology-img {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <div class="Navbar" id="Navbar">
       <!-- Navbar content here -->
     </div>
-    <main class="container" role="main">
-      <h1>About Us</h1>
-
-      <section class="about-section" aria-labelledby="mission-title">
-        <div class="about-content">
-          <h2 id="mission-title">Our Mission</h2>
+    <main>
+      <div class="about-cards-grid">
+        <div class="about-card">
+          <span class="about-icon"><i class="fas fa-bullseye"></i></span>
+          <h2>Our Mission</h2>
           <p>
-            At Jupiterking Technologies, our mission is to deliver innovative and
-            reliable digital solutions that empower businesses and foster growth
-            through cutting-edge technology and exceptional service.
+            Deliver innovative and reliable digital solutions that empower businesses and foster growth through cutting-edge technology and exceptional service.
           </p>
+          <ul>
+            <li><strong>Empowerment:</strong> Helping clients achieve their business goals with technology.</li>
+            <li><strong>Reliability:</strong> Consistent, high-quality delivery and support.</li>
+            <li><strong>Innovation:</strong> Leveraging the latest tools and frameworks for best results.</li>
+          </ul>
         </div>
-        <div class="about-illustration">
-          <!-- Optional illustration or icon -->
-        </div>
-      </section>
-
-      <section class="about-section" aria-labelledby="vision-title">
-        <div class="about-content">
-          <h2 id="vision-title">Our Vision</h2>
+        <div class="about-card">
+          <span class="about-icon"><i class="fas fa-eye"></i></span>
+          <h2>Our Vision</h2>
           <p>
-            We envision being a global leader in technology solutions, renowned
-            for our commitment to quality, client satisfaction, and creating
-            impactful digital experiences across industries.
+            To be a global leader in technology solutions, renowned for our commitment to quality, client satisfaction, and impactful digital experiences across industries.
           </p>
+          <ul>
+            <li><strong>Global Reach:</strong> Serving clients worldwide with scalable solutions.</li>
+            <li><strong>Quality Focus:</strong> Adhering to the highest standards in every project.</li>
+            <li><strong>Client Success:</strong> Building long-term partnerships and value.</li>
+          </ul>
         </div>
-        <div class="about-illustration">
-          <!-- Optional illustration or icon -->
-        </div>
-      </section>
-
-      <section class="about-section" aria-labelledby="values-title">
-        <div class="about-content">
-          <h2 id="values-title">Our Values</h2>
+        <div class="about-card">
+          <span class="about-icon"><i class="fas fa-gem"></i></span>
+          <h2>Our Values</h2>
           <ul>
             <li><strong>Innovation:</strong> Embracing creativity and new technologies to deliver forward-thinking solutions.</li>
             <li><strong>Integrity:</strong> Maintaining transparency, honesty, and ethical practices in all we do.</li>
@@ -52,26 +183,32 @@
             <li><strong>Excellence:</strong> Striving for the highest standards in quality, performance, and service delivery.</li>
           </ul>
         </div>
-        <div class="about-illustration">
-          <!-- Optional illustration or icon -->
+      </div>
+      <section class="about-methodology">
+        <div class="about-methodology-content">
+          <h2 style="color:#004080;display:flex;align-items:center;gap:0.7rem;">
+            <span><i class="fas fa-cogs"></i></span> Our Methodology
+          </h2>
+          <p>
+            We are agile and organized, making no task too complex. Every step of the way, we march with your vision towards your goal and complete projects with less turnaround time.
+          </p>
+          <ul>
+            <li><strong>Agile Approach:</strong> Iterative development for rapid delivery and flexibility.</li>
+            <li><strong>Collaboration:</strong> Continuous communication with clients for alignment and transparency.</li>
+            <li><strong>Quality Assurance:</strong> Rigorous testing and review at every stage.</li>
+            <li><strong>Customer Delight:</strong> We celebrate your success as our own.</li>
+          </ul>
+        </div>
+        <div class="about-methodology-img">
+          <img src="../resources/Images/team-illustration.png" alt="Team working illustration" />
         </div>
       </section>
-
-      <section class="about-section methodology-section" aria-labelledby="methodology-title">
-        <div class="about-content">
-          <h2 id="methodology-title">Our Methodology</h2>
-          <p>
-            We are agile and organized, which makes no tasks complex for us to handle. Every step of the way, we march with your vision towards the goal you have in mind and complete the projects with less turnaround time.
-          </p>
-          <p>
-            When you win, we win, and it's when you are happy that we are thrilled as well. With the latest agile tools and technologies, we deliver top-notch SaaS solutions that take your business to the next level.
-          </p>
-        </div>
-        <div class="about-illustration">
-          <!-- Replace src with your own illustration if available -->
-          <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/people-2029367_1280.png" alt="Team working illustration" style="max-width: 320px; width: 100%;" />
-        </div>
-      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="./about.js"></script>
+    <script src="../resources/jquery/jquery-3.7.1.min.js"></script>
+  </body>
+</html>
     </main>
     <div id="footer"></div>
     <script src="./about.js"></script>

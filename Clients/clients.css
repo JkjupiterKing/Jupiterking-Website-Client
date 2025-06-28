@@ -347,9 +347,14 @@ footer .contact-info p {
 }
 
 .company-logo {
-  width: 60px;
-  height: auto;
-  margin: 0 auto 15px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  background: #f5f7fa;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.07);
+  padding: 0.5rem;
   display: block;
 }
 
@@ -402,5 +407,272 @@ footer .contact-info p {
 
   .stars {
     font-size: 1rem;
+  }
+}
+
+/* Clients Section Styles */
+.clients-hero {
+  background: linear-gradient(120deg, #1e3c72 0%, #2a5298 50%, #4e4376 100%);
+  color: #fff;
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, #ffd70055 0%, transparent 70%);
+  z-index: 0;
+}
+
+.clients-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, #00e6e655 0%, transparent 70%);
+  z-index: 0;
+}
+
+.clients-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.clients-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(30, 41, 59, 0.18);
+}
+
+.clients-hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.93;
+  color: #e0e7ef;
+  text-shadow: 0 1px 4px rgba(30, 41, 59, 0.10);
+}
+
+.clients-main-bg {
+  background: #f8fafd;
+  min-height: 100vh;
+  padding-bottom: 1rem; /* reduced from 2rem */
+}
+
+/* Client Logos */
+.animated-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 2.5rem 0 3rem 0;
+  flex-wrap: wrap;
+}
+
+.client-logo-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.08);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 120px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeInUp 0.7s forwards;
+}
+
+.client-logo-card img {
+  max-width: 120px;
+  max-height: 100px;
+  object-fit: contain;
+  filter: grayscale(0.2) brightness(0.95);
+  transition: filter 0.3s;
+}
+
+.client-logo-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(30, 41, 59, 0.16);
+}
+
+.client-logo-card:hover img {
+  filter: grayscale(0) brightness(1.1);
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.7s forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Testimonials */
+.animated-testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem;
+  margin: 3rem 0 1rem 0; /* reduced bottom margin */
+  flex-wrap: wrap;
+}
+
+.testimonial-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: testimonialFadeIn 0.8s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-fade-in.delay-1 { animation-delay: 0.2s; }
+.testimonial-fade-in.delay-2 { animation-delay: 0.5s; }
+.testimonial-fade-in.delay-3 { animation-delay: 0.8s; }
+
+@keyframes testimonialFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.testimonial-box .testimonial-quote {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  color: #4e4376;
+  font-size: 2.2rem;
+  opacity: 0.13;
+  pointer-events: none;
+}
+
+.testimonial-box .company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  background: #f5f7fa;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.07);
+  padding: 0.5rem;
+  display: block;
+}
+
+.testimonial-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2a5298;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  color: #2d3748;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.section-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Standard fade-in animation for all animated elements */
+@keyframes fadeInStandard {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-8px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Apply to logo cards */
+.client-logo-card,
+.fade-in-up {
+  animation-name: fadeInStandard;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Apply to testimonials */
+.testimonial-box,
+.testimonial-fade-in {
+  animation-name: fadeInStandard;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Staggered delays for a smooth entrance */
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.35s; }
+.delay-3 { animation-delay: 0.55s; }
+
+@media (max-width: 900px) {
+  .animated-logos,
+  .animated-testimonials {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .client-logo-card,
+  .testimonial-box {
+    max-width: 95vw;
+    min-width: 0;
   }
 }
